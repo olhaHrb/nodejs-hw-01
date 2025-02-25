@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
-import { createFakeContact } from '../utils/createFakeContact';
-import { writeContacts } from '../utils/writeContacts';
+import { createFakeContact } from '../utils/createFakeContact.js';
+import { writeContacts } from '../utils/writeContacts.js';
 
 const generateContacts = async (number) => {
   const contacts = faker.helpers.multiple(createFakeContact, {
@@ -9,4 +9,4 @@ const generateContacts = async (number) => {
   writeContacts(contacts);
 };
 
-generateContacts(5);
+generateContacts(2);
